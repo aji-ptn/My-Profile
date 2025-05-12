@@ -32,49 +32,21 @@
 
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
-            <span>
-              Aji Pamungkas Tri Nurcahyo
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
+    <!-- This is the container where footer will be loaded -->
+    <div id="header"></div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Service </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="blog.html"> Blog </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+    <!-- Load footer using JavaScript -->
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section ">
-      <div class="container">
+    <section class=" slider_section "style="background-color: black;">
+      <div class="container" >
         <div class="row">
           <div class="col-md-6 ">
             <div class="detail_box">
@@ -84,15 +56,16 @@
                 <span class="typing-text">
                 </div>
               </h1>
-              <p>
-                Life is like riding a bicycle. To keep your balance, you must keep moving - Albert Einstein
-              </p>
-            <a href="" class="btn liquid">
-              My Portfolio
-            </a>
-            <a href="" class="btn liquid">
-              Contact Us
-            </a>
+                <p>
+                  Life is like riding a bicycle. To keep your balance, you must keep moving - Albert Einstein
+                </p>
+            
+                <a href="" class="btn liquid">
+                  My Portfolio
+                </a>
+                <a href="" class="btn liquid">
+                  Contact Us
+                </a>
             </div>
           </div>
           
@@ -111,11 +84,11 @@
                         <img src="images/Aji RED.jpg" alt="">
                       </div>
                     </div>
-                    <!-- <div class="carousel-item"> -->
-                      <!-- <div class="img-box"> -->
-                        <!-- <img src="images/slider-img.jpg" alt=""> -->
-                      <!-- </div> -->
-                    <!-- </div> -->
+                    <!-- <div class="carousel-item">
+                      <div class="img-box">
+                        <img src="images/Aji Blue_imresizer.png" alt="">
+                      </div>
+                    </div> -->
                   </div>
                 </div>
               </div>

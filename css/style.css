@@ -1,7 +1,17 @@
+:root{
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color1: #13212c;
+  --text-colorh1: #333333;
+  --text-colorh2: #333333;
+  --text-color-text: cyan;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  color: #0c0c0c;
-  background-color: #ffffff;
+  color: var(--text-color-text);
+  background-color: var(--background-color1);
 }
 
 .layout_padding {
@@ -64,7 +74,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #eae6f5;
+  background-color: var(--text-color-text);
 }
 
 .sub_page .hero_area {
@@ -82,7 +92,7 @@ body {
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 7px 20px;
   margin: 10px 15px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   border-radius: 35px;
   text-transform: uppercase;
@@ -167,7 +177,7 @@ a:focus {
   display: block;
   width: 35px;
   height: 4px;
-  background-color: #190734;
+  background-color: white;
   margin: 7px 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -698,7 +708,7 @@ a:focus {
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   background: none;
   border: 2px solid #646cff;
   border-radius: 8px;
@@ -830,11 +840,17 @@ section {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    color: #3f345f;
+    color: #cfdfec;
 }
 
 h2 {
     font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #a4a0d6;
 }
 
 .social-overlap {

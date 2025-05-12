@@ -32,95 +32,79 @@
 
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
-            <span>
-              Electrochip
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
+    <!-- This is the container where footer will be loaded -->
+    <div id="header"></div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Service </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="blog.html"> Blog </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="contact.html">Contact </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
+    <!-- Load footer using JavaScript -->
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
+        <!-- end header section -->
   </div>
 
 
   <!-- contact section -->
-
-  <section class="contact_section layout_padding">
-    <div class="container ">
-      <div class="heading_container">
-        <h2>
-          Contact Me
-        </h2>
-        <img src="images/plug.png" alt="">
+<section class="blog_section layout_padding" style="backkground-color: #1e4063;">
+  <div class="container" style="margin-bottom: 0px;">
+    <div class="heading_container text-center">
+      <h2>Contact Me</h2>
+      <img src="images/plug.png" alt="" class="my-3">
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p>
+          Have a project in mind or want to discuss potential opportunities? <br>
+          Feel free to reach out using the form below.
+        </p>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <btn class="btn liquid">
-                SEND
-              </btn>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7944.70533142726!2d105.31337020000001!3d-5.36305265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c35634c1a611%3A0xcb3cf692dbb4f26!2sInstitut%20Teknologi%20Sumatera!5e0!3m2!1sen!2sid!4v1746982430396!5m2!1sen!2sid" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-            </div>
+  </div>
+</section>
+
+
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form action="https://formspree.io/f/mdkgldrg" method="POST">
+          <div class="mb-3">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="_replyto" required class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="5" required class="form-control"></textarea>
+          </div>
+          <div class="d-flex">
+            <button type="submit" class="btn liquid" style="margin-left: auto;">
+              SEND
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Map -->
+      <div class="col-md-6">
+        <div class="map_container">
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7944.70533142726!2d105.31337020000001!3d-5.36305265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c35634c1a611%3A0xcb3cf692dbb4f26!2sInstitut%20Teknologi%20Sumatera!5e0!3m2!1sen!2sid!4v1746982430396!5m2!1sen!2sid" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%;" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- end contact section -->
+  <!-- end contact section
 
 
   <!-- info section -->
@@ -133,23 +117,23 @@
             <a href="">
               <img src="images/location-white.png" alt="">
               <span>
-                Passages of Lorem Ipsum available
+                Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365
               </span>
             </a>
           </div>
-          <div class="col-md-4">
+          <!-- <div class="col-md-4">
             <a href="">
               <img src="images/telephone-white.png" alt="">
               <span>
                 Call : +012334567890
               </span>
             </a>
-          </div>
+          </div> -->
           <div class="col-md-4">
             <a href="">
               <img src="images/envelope-white.png" alt="">
               <span>
-                demo@gmail.com
+                ajipamungkastn@gmail.com
               </span>
             </a>
           </div>
@@ -222,17 +206,16 @@
 </section> -->
 
   <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 col-md-9 mx-auto">
-          <p>
-            &copy; 2025 All Rights Reserved By Aji Pamungkas Tri Nurcahyo
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
+
+  <!-- Load footer using JavaScript -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
   <!-- footer section -->
 
 
